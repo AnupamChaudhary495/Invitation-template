@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wedding Invitation</title>
+  <meta name="description" content="Wedding Invitation">
+  <meta property="og:title" content="Wedding Invitation">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cormorant+SC:wght@300;400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="locked">
+
+  <!-- Reusable corner flourish -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="flourish" viewBox="0 0 260 260">
+        <g fill="none" stroke="#9a9087" stroke-width="1.2" stroke-linecap="round">
+          <path d="M18 250 C 6 160, 30 70, 120 38 C 170 20, 215 22, 238 34"/>
+          <path d="M60 120 C 40 100, 38 78, 52 62 C 66 76, 70 100, 60 120 Z"/>
+          <path d="M92 70 C 76 54, 78 34, 94 24 C 106 38, 106 56, 92 70 Z"/>
+          <path d="M150 38 C 148 18, 164 6, 182 8 C 182 26, 170 38, 150 38 Z"/>
+          <path d="M30 190 C 50 184, 68 192, 74 208 C 54 212, 38 206, 30 190 Z"/>
+          <path d="M42 150 C 62 142, 82 150, 90 166 C 68 170, 50 164, 42 150 Z"/>
+          <path d="M200 30 C 214 22, 226 28, 226 44 C 212 46, 202 42, 200 30 Z"/>
+          <circle cx="210" cy="18" r="3"/>
+          <circle cx="226" cy="14" r="1.6"/>
+          <circle cx="22" cy="232" r="1.6"/>
+        </g>
+        <g fill="#9a9087"><circle cx="238" cy="34" r="1.8"/><circle cx="14" cy="214" r="1.4"/></g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ENVELOPE INTRO -->
+  <section id="envelope" class="envelope" role="button" tabindex="0" aria-label="Open invitation">
+    <div class="flap flap-top"></div>
+    <div class="flap flap-bottom"></div>
+    <div class="env-content">
+      <p class="env-eyebrow" data-k="envEyebrow"></p>
+      <h2 class="env-name" data-k="groomFull"></h2>
+      <p class="env-parents" data-k="groomParents"></p>
+      <p class="env-with">with</p>
+      <h2 class="env-name" data-k="brideFull"></h2>
+      <p class="env-parents" data-k="brideParents"></p>
+    </div>
+    <div class="seal"><span data-k="sealSymbol"></span></div>
+    <div class="env-foot">
+      <p class="env-teaser" data-k="teaser"></p>
+      <p class="env-hint" data-k="hint"></p>
+    </div>
+  </section>
+
+  <!-- FIXED DECOR -->
+  <div class="frame" aria-hidden="true"></div>
+  <svg class="corner tl" aria-hidden="true"><use href="#flourish"/></svg>
+  <svg class="corner tr" aria-hidden="true"><use href="#flourish"/></svg>
+  <svg class="corner bl" aria-hidden="true"><use href="#flourish"/></svg>
+  <svg class="corner br" aria-hidden="true"><use href="#flourish"/></svg>
+  <div id="petals" class="petals" aria-hidden="true"></div>
+
+  <nav class="nav">
+    <a href="#story" class="nav-link">OUR STORY</a>
+    <a href="#top" class="monogram" aria-label="Back to top">
+      <span class="orn">❦</span>
+      <span class="mono"><span data-k="mono1"></span><i>&amp;</i><span data-k="mono2"></span></span>
+    </a>
+    <a href="#schedule" class="nav-link">SCHEDULE</a>
+  </nav>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <p class="eyebrow" data-k="heroEyebrow"></p>
+        <h1 class="names"><span data-k="groomFirst"></span><em>&amp;</em><span data-k="brideFirst"></span></h1>
+      </div>
+      <div class="hero-photo" id="heroPhoto"></div>
+      <div class="hero-right">
+        <p class="small-caps" data-k="country"></p>
+        <div class="datebox">
+          <span class="small-caps" data-k="month"></span>
+          <span class="brace">{</span><span class="day" data-k="day"></span><span class="brace">}</span>
+          <span class="small-caps" data-k="year"></span>
+        </div>
+        <p class="small-caps" data-k="city"></p>
+      </div>
+    </section>
+
+    <!-- INVITE -->
+    <section class="block center reveal">
+      <p class="eyebrow" data-k="inviteEyebrow"></p>
+      <h2 class="display" data-k="inviteHeading"></h2>
+      <div class="divider"></div>
+      <p class="body" data-k="inviteBody"></p>
+    </section>
+
+    <!-- STORY -->
+    <section class="block center reveal" id="story">
+      <div class="divider"></div>
+      <h2 class="display" data-k="storyHeading"></h2>
+      <div class="divider"></div>
+      <p class="story-text" data-k="storyText"></p>
+      <div class="polaroids" id="polaroids"></div>
+    </section>
+
+    <!-- VENUE -->
+    <section class="block center reveal">
+      <p class="eyebrow" data-k="venueEyebrow"></p>
+      <h2 class="display" data-k="venueHeading"></h2>
+      <p class="ceremony-tag" data-k="venueLabel"></p>
+      <h3 class="venue-title" data-k="venueName"></h3>
+      <p class="body" data-k="venueBlurb"></p>
+      <div class="venue-card">
+        <div id="venuePhoto"></div>
+        <div class="venue-info">
+          <h3 class="venue-title" data-k="venueName2"></h3>
+          <p class="address" data-k="venueAddress"></p>
+          <a class="btn" id="venueDirections" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="block center" id="schedule">
+      <div class="reveal">
+        <p class="eyebrow" data-k="schedEyebrow"></p>
+        <h2 class="display" data-k="schedHeading"></h2>
+        <div class="divider"></div>
+      </div>
+      <div id="days"></div>
+    </section>
+
+    <!-- SECOND VENUE -->
+    <section class="block center reveal" id="second"></section>
+
+    <!-- FOOTER -->
+    <footer class="footer reveal">
+      <div class="divider"></div>
+      <h2 class="names small"><span data-k="groomFirst"></span><em>&amp;</em><span data-k="brideFirst"></span></h2>
+      <p class="small-caps" data-k="fVenue"></p>
+      <p class="small-caps dim" data-k="fLine"></p>
+      <p class="small-caps" data-k="fDate"></p>
+    </footer>
+  </main>
+
+  <button id="music" class="music" aria-label="Toggle music" hidden>♪</button>
+  <audio id="audio" loop></audio>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
